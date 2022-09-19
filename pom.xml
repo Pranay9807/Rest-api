@@ -12,7 +12,7 @@
 	<artifactId>pranay</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>NiMapInfotech_Project</name>
-	<description>Blog users</description>
+	<description>Rest_api_project</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

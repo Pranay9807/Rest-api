@@ -24,6 +24,14 @@ public class ProductsService {
 
 	@Autowired
 	private CatogeroyService cs;
+	
+	// METHOD TO ADD NEW PRODUCT
+	public Products addProduct(Integer id, Products products) {
+		Category foundCategory = this.cs.getCategoryById(id);
+		products.setCategory(foundCategory);
+		Products savedProduct = this.pr.save(products);
+		return savedProduct;
+	}
 
 	// METHOD TO GET ALL PRODUCTS
 	public List<Products> getAllProducts(Integer page) {
@@ -59,11 +67,5 @@ public class ProductsService {
 	public void deleteProductsById(Integer id) {
 		this.pr.deleteById(id);
 	}
-	// METHOD TO ADD NEW PRODUCT
-	public Products addProduct(Integer id, Products products) {
-		Category foundCategory = this.cs.getCategoryById(id);
-		products.setCategory(foundCategory);
-		Products savedProduct = this.pr.save(products);
-		return savedProduct;
-	}
+	
 }

@@ -66,11 +66,4 @@ public class ProductsService {
 		Products savedProduct = this.pr.save(products);
 		return savedProduct;
 	}
-	
-
-	// METHOD TO GET ALL PRODUCTS
-	public List<Products> getProducts(Integer id) {
-		Category foundCategory = this.cs.getCategoryById(id);
-		return foundCategory.getProducts();
-	}
 }
